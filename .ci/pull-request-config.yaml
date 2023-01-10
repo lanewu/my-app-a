@@ -5,8 +5,8 @@ dependencies: ./project-dependencies.yaml
 default:
   build-command:
     before:
-      current: echo $(ls -l ~/.m2/repository/com/mycompany/app/)
-      upstream: echo $(ls -l ~/.m2/repository/com/mycompany/app/)
+      current: ls -l ~/.m2/repository/
+      upstream: ls -l ~/.m2/repository/
     current: |
       mvn -e clean install
     upstream: |
