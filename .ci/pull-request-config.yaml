@@ -7,9 +7,9 @@ default:
     before:
       current: echo $(ls -l ~/.m2/repository/com/mycompany/app/)
       upstream: echo $(ls -l ~/.m2/repository/com/mycompany/app/)
-    current: ｜
+    current: |
       mvn -e clean install
-    upstream: ｜
+    upstream: |
       mvn -e -T1C clean install -DskipTests
     after:
       upstream: rm -rf ./*
