@@ -5,6 +5,6 @@ dependencies: ./project-dependencies.yaml
 default:
   build-command:
     current: mvn -e clean install
-    upstream: mvn -e --builder smart -T1C clean install -DskipTests
+    upstream: mvn -e -T1C clean install -DskipTests
     after:
       upstream: rm -rf ./*
