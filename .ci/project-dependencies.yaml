@@ -1,0 +1,11 @@
+version: "2.1"
+
+dependencies:
+  - project: lanewu/my-app-a
+
+  - project: lanewu/my-app-b
+
+  - project: lanewu/my-app-d
+    dependencies:    
+      - project: lanewu/my-app-a
+      - project: lanewu/my-app-b
