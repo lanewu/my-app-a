@@ -5,9 +5,11 @@ dependencies: ./project-dependencies.yaml
 default:
   build-command:
     current: |
+      ls -l /home/runner/.m2/repository/com/mycompany/app/
       mvn -e clean install
       ls -l /home/runner/.m2/repository/
     upstream: |
+      ls -l /home/runner/.m2/repository/com/mycompany/app/
       mvn -e -T1C clean install -DskipTests
       ls -l /home/runner/.m2/repository/
     after:
