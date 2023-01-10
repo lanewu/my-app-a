@@ -23,7 +23,7 @@ jobs:
       - name: Install required packages
         run: |
           ls -l ~/.m2/repository/
-          ls -l ~/.m2/repository/com/mycompany/app/
+          ls -l ~/.m2/repository/com/mycompany/app/ || echo 'N/A'
       
       - name: Build
         run: |
