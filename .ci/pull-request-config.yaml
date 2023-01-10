@@ -4,9 +4,6 @@ dependencies: ./project-dependencies.yaml
 
 default:
   build-command:
-    before:
-      current: ls -l ~/.m2/repository/
-      upstream: ls -l ~/.m2/repository/
     current: |
       mvn -e clean install
     upstream: |
