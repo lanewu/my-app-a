@@ -1,0 +1,10 @@
+version: "2.1"
+
+dependencies: ./project-dependencies.yaml
+
+default:
+  build-command:
+    current: mvn -e clean install
+    upstream: mvn -e --builder smart -T1C clean install -DskipTests
+    after:
+      upstream: rm -rf ./*
