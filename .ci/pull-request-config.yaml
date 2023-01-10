@@ -5,10 +5,10 @@ dependencies: ./project-dependencies.yaml
 default:
   build-command:
     current: |
-      mvn -e clean install
-      ls -l ~/.m2/repository/com/mycompany/app/
+      ls -l /home/runner/.m2/repository/com/
+      mvn -e clean install      
     upstream: |
+      ls -l /home/runner/.m2/repository/com/
       mvn -e -T1C clean install -DskipTests
-      ls -l ~/.m2/repository/com/mycompany/app/
     after:
       upstream: rm -rf ./*
