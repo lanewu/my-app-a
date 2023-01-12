@@ -1,6 +1,7 @@
 name: Ubuntu 20
 on: 
   workflow_dispatch:
+  workflow_call:
 
 jobs:
   build:
